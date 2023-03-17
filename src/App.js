@@ -6,11 +6,12 @@ function MyButton() {
 
   function handleClick(){
     setCount(count + 1);
+    alert("Clicked " + count + " times!");
   }
 
   return (
     <button onClick = {handleClick}>
-      Clicked {count} times :/
+      Click me!
     </button>
   );
 }
