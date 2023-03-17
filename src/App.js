@@ -1,8 +1,13 @@
 import './App.css';
 
 function MyButton() {
+  
+  function handleClick(){
+    alert("Clicked button?");
+  }
+
   return (
-    <button>
+    <button onClick = {handleClick}>
       Click me!
     </button>
   );
