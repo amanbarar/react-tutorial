@@ -10,9 +10,9 @@ function MyButton() {
 
 export default function MyApp(){
   return(
-    <div>
+    <div className='bg-window'>
       <h1>How to make a button</h1>
-      <MyButton />
+      <MyButton/>
     </div>
   )
 };
