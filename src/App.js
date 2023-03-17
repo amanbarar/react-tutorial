@@ -1,42 +1,29 @@
 import './App.css';
 import { useState } from 'react';
 
-function MyButton() {
+
+export default function MyApp(){
+
   const [count, setCount] = useState(0); //current state(count), updated state(setCount)
 
   function handleClick(){
     setCount(count + 1);
   }
-
-  return (
-    <button onClick = {handleClick}>
-      Clicked {count} times!
-    </button>
-  );
-}
-
-const products = [
-  { title: 'Cabbage', id: 1, isFruit: false },
-  { title: 'Garlic', id: 2, isFruit: false },
-  { title: 'Apple', id: 3, isFruit: true },
-];
-
-const listItems = products.map(product =>
-  <li key = {product.id}
-    style={{
-      color: product.isFruit ? 'green' : 'red'
-    }}
-  >
-    {product.title}
-  </li>
-  );
-
-export default function MyApp(){
+  //using props in MyButton
   return(
     <div className='bg-window'>
     <h1>Counters that update separately</h1>
-    <MyButton />
-    <MyButton />
+    <MyButton count={count} onClick={handleClick} />
+    <MyButton count={count} onClick={handleClick}/>
     </div>
-  )
-};
+  );
+}
+
+
+function MyButton({ count, onClick }){
+  return(
+    <button onClick={onClick}>
+      Clicked {count} times.
+    </button>
+  );
+}
