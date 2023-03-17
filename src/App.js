@@ -6,12 +6,11 @@ function MyButton() {
 
   function handleClick(){
     setCount(count + 1);
-    alert("Clicked " + count + " times!");
   }
 
   return (
     <button onClick = {handleClick}>
-      Click me!
+      Clicked {count} times!
     </button>
   );
 }
@@ -35,7 +34,8 @@ const listItems = products.map(product =>
 export default function MyApp(){
   return(
     <div className='bg-window'>
-    <ul>{listItems}</ul>
+    <h1>Counters that update separately</h1>
+    <MyButton />
     <MyButton />
     </div>
   )
