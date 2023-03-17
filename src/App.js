@@ -28,6 +28,7 @@ export default function MyApp(){
   return(
     <div className='bg-window'>
     <ul>{listItems}</ul>
+    <MyButton />
     </div>
   )
 };
