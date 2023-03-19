@@ -3,7 +3,12 @@ import { useState } from 'react';
 
 
 function Square({ value }){
-  return <button className='p-3 px-6 square border-2 border-black hover:bg-blue-200 text-blue-300'>{value}</button>;
+  function handleClick(){
+    console.log("Clicked on value "+value);
+  }
+  return (
+    <button className='p-3 px-6 square border-2 border-black hover:bg-blue-200 text-blue-300' onClick={handleClick}>{value}</button>
+    );
 }
 
 export default function Board(){
